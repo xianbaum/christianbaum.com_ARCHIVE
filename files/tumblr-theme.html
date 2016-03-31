@@ -1,0 +1,462 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{block:TagPage}{Tag} - {/block:TagPage}{block:SearchPage}{SearchQuery} - {/block:SearchPage}{block:PostSummary}{PostSummary} - {/block:PostSummary}{Title}</title>
+    {block:Description}<meta name="description" content="{MetaDescription}" />{/block:Description}
+    <link rel="shortcut icon" href="{Favicon}" />
+    <link rel="apple-touch-icon" href="{PortraitURL-128}"/>
+    <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+    <style type="text/css">
+body {
+background-color: #dce;
+margin: 0;
+padding: 0;
+font-family: "Times New Roman";
+}
+
+a img {
+border: none;
+}
+
+footer {
+border: none;
+padding: 0;
+margin: 0;
+}
+
+a:link {
+color: #006;
+text-decoration: underline;
+}
+
+a:active {
+color: #006;
+text-decoration: none;
+}
+
+a:hover {
+text-decoration: none;
+}
+
+a:visited {
+color: #026;
+}
+
+article {
+padding:0;
+margin:0;
+border:0;
+}
+
+h1{
+margin: 0 30px;
+font-size: 24px;
+color: #000;
+text-decoration: none;
+font-family: "Times New Roman";
+}
+
+#h1{
+font-size: 24px;
+color: #000;
+text-decoration: none;
+font-family: "Times New Roman";
+}
+
+.left {
+text-align: left;
+float: left;
+}
+
+.center {
+}
+
+.right {
+float:right;
+text-align: right;
+}
+
+hr {
+border: 0;
+background-color: #114;
+margin:10px;
+padding:1px;
+color: #114;
+}
+
+#content {
+vertical-align:top;
+width:100%;
+background: #fff;
+font-family: verdana;
+background: #fff;
+padding: 10px;
+border-top: 1px;
+border-bottom: 1px;
+border-style:solid;
+border-color:#505;
+}
+
+#content blockquote {
+color: #005;
+font-style: italic;
+border: none;
+}
+
+#content .copy {
+padding: 10px;
+font-size: 13px;
+line-height: 15px;
+}
+
+#content .copy a {
+color: #006;
+text-decoration: underline;
+}
+
+#content .copy p {
+margin: 10px 0 0 0;
+padding: 0;
+}
+
+#content .copy pre {
+margin: 10px 0px 10px 0px;
+padding: 10px;
+background-color: #dce;
+font: normal 11px Courier, monospace;
+overflow: auto;
+}
+
+#content .copy > p:first-child {
+margin-top: 0;
+}
+
+#content .copy img {
+max-width: 100%;
+}
+
+#content .audio {
+background: #dce;
+padding: 7px;
+margin-bottom: 10px;
+}
+
+#content .audio .player {
+}
+
+#content .audio .player .audio_player embed {
+border: 1px solid #c8c8c8;
+}
+
+#content .audio .meta {
+padding: 8px 13px;
+height: 13px;
+color: #000;
+font-size: 11px;
+text-transform: lowercase;
+}
+
+#content .audio .meta a {
+color: #000;
+}
+
+#content .audio .meta a:hover{
+color: #006;
+}
+ 
+h2 {
+font-size: 18pt;
+color: #000;
+text-decoration: none;
+padding: 10px 10px 0 10px;
+}
+
+a.h2 {
+font-size: 18pt;
+color: #000;
+text-decoration: none;
+}
+
+#content img {
+max-width: 500px;
+}
+
+#content .chat {
+background-color: #fff;
+border-left: 1px solid #505;
+margin: 10px 10px 0 10px;
+font-size: 14px;
+}
+
+#content .chat .lines {
+margin-left: 1px;
+}
+
+#content .link {
+margin: 4px 0 2px 0;
+font-size: 16px;
+line-height: 25px;
+}
+
+#content .link a {
+color: #006;
+padding: 5px 7px;
+}
+
+#content .link a:hover {
+}
+
+#content .footer {
+background: #dce;
+font-size: 11px;
+padding: 5px 10px;
+margin-top: 10px;
+}
+
+.tags {
+list-style-type: none;
+display: inline;
+}
+
+.tags li{
+display: inline;
+}
+
+a h2 {
+text-decoration:none;
+}
+
+h2 a {
+text-decoration:none;
+}
+
+#page {
+margin: 10px 1px 10px 1px;
+width: 100%;
+text-align: center;
+}
+
+#sidebar {
+vertical-align:top;
+border: 1px solid #505;
+width: 200px;
+color: #000;
+background: #fff;
+padding: 0 0 5px 0;
+}
+
+#sidebar dfn{
+margin-left: 5px;
+font-style: normal;
+}
+
+#avatar {
+margin:0;
+padding:0;
+width: 200px;
+height: 200px;
+}
+
+#avatar img {
+padding: 0px;
+margin: 0px;
+width: 200px;
+height: 200px;
+border-bottom: 1px solid #505;
+}
+
+#description {
+margin-top:5px;
+margin-left:5px;
+font-size: 8pt;
+}
+
+#following{
+list-style: none;
+}
+
+#following a{
+color: #006;
+font-size: 15pt;
+}
+
+#following img {
+width: 48px;
+height: 48px;
+}
+
+a.links
+{
+font-size: 13pt;
+margin:5px;
+color: #006;
+text-decoration:none;
+}
+
+a.tumblr
+{
+font-size: 8pt;
+margin:5px;
+color: #33a;
+text-decoration:none;
+}
+
+#tagged
+{
+list-style: none;
+}
+#tagged li
+{
+font-size: 8pt;
+}
+.notes
+{
+list-style-type: none;
+list-style: none;
+padding:0;
+margin:0;
+}
+.notes li
+{
+padding:0;
+margin:0;
+}
+
+    </style>
+</head>
+<body>
+<h1>
+    <a href="/" id="h1">{Title}</a>
+</h1>
+
+<table>
+<tr>
+<td id="content">
+{block:SearchPage}<h2>Tagged: {SearchQuery}</h2><hr />{/block:SearchPage}
+{block:NoSearchResults}<p>{lang:No posts found}</p>{/block:NoSearchResults}
+{block:TagPage}<h2>Tagged: {Tag}</h2><hr />{/block:TagPage}
+{block:Posts}
+<article>
+	{block:Photo}
+	{block:IndexPage}<a href="{Permalink}">{/block:IndexPage}
+		<img src="{block:IndexPage}{PhotoURL-250}{/block:IndexPage}{block:PermalinkPage}{PhotoURL-500}{/block:PermalinkPage}" alt="{PhotoAlt}" />
+	{block:IndexPage}</a>{/block:IndexPage}
+	{block:PermalinkPage}{block:HighRes}
+		<br />
+		<a href="{PhotoURL-HighRes}">{lang:View high resolution}</a>
+	{/block:HighRes}{block:PermalinkPage}
+    {block:Caption}<p class="copy">{Caption}</div>{/block:Caption}
+    {/block:Photo}
+
+	{block:Video}
+	{Video-500} <br />
+    {block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
+    {/block:Video}
+
+    {block:Audio}
+	{block:AudioEmbed}
+	{AudioEmbed}
+    {/block:AudioEmbed}
+	{block:AudioPlayer}
+    {block:AlbumArt}
+	<img src="{AlbumArtURL}" alt="{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}" />
+    {/block:AlbumArt}
+
+	<div class="audio">
+    <div class="player">{AudioPlayerWhite}</div>
+    <div class="meta">{block:PlayCount}{PlayCountWithLabel}{/block:PlayCount}{block:ExternalAudio}<span class="download_external_audio"> &bull; <a href="{ExternalAudioURL}">{lang:Download}</a></span>{/block:ExternalAudio}</div>
+    </div>
+    {/block:AudioPlayer}
+	{block:Caption}<div class="copy">{Caption}</div>{/block:Caption}
+	{/block:Audio}
+ 
+	{block:Quote}
+	<blockquote>{Quote}</blockquote>
+	{block:Source}&mdash; {Source}
+	{/block:Source}
+	{/block:Quote}
+ 
+{block:Text}
+{block:Title}<h2><a href = "{Permalink}" class = "h2">{Title}</a></h2>{/block:Title}
+{Body}
+{/block:Text}
+
+{block:Answer}
+<q>{Question}</q> &mdash; {Asker}
+<div class="copy">{Answer}</div>
+{/block:Answer}
+	{block:Chat}
+	<table>
+		{block:Title}<caption>{Title}</caption>{/block:Title}
+		{block:Lines}
+		<tr>
+		{block:Label}<th>{Label}</th>{/block:Label}<td>{Line}</td>
+		</tr>
+		{/block:Lines}
+	</table>
+	{/block:Chat}
+
+{block:Link}
+<div class="link"><a href="{URL}" {Target}>{Name} &raquo;</a></div>
+{block:Description}<div class="copy">{Description}</div>{/block:Description}
+{/block:Link}
+
+{block:Date}
+<footer><div class = "footer">
+{block:PostSummary}{/block:PostSummary}{block:IndexPage}<a href="{Permalink}">{lang:Permalink} / {lang:More}</a>{/block:IndexPage}
+<a href="{Permalink}">{MonthNumberWithZero}/{DayOfMonthWithZero}/{Year} {24Hour}:{Minutes}:{Seconds}</a>
+{block:Reblog}{lang:Reblogged TimeAgo from ReblogParentName 2}</a>
+{block:RebloggedFromReblog}({lang:Originally from ReblogRootName 2}){/block:RebloggedFromReblog}
+{block:ContentSource}{lang:Source}: <a href="{SourceURL}" class="source_url">{SourceTitle}</a>{/block:ContentSource}
+{/block:Reblog}{block:NotReblog}{lang:Posted TimeAgo by PostAuthorName 2}{/block:NotReblog}
+<br />
+{block:HasTags}<ol class="tags">{block:Tags}<li><a href="{TagURL}">{Tag}</a>&nbsp;</li>{/block:Tags}</ol><br />{/block:HasTags}
+{block:PostNotes}{block:NoteCount}<hr />{PostNotes}{/block:NoteCount}{/block:PostNotes}
+</div></footer>
+{/block:Date}
+<hr />
+</article>
+{/block:Posts}
+{block:Pagination}
+	<div id = "page">
+	{block:PreviousPage}<a href="{PreviousPage}" class = "left">{lang:Prev}</a>{/block:PreviousPage}
+    <span class = "center">{block:JumpPagination length="5"}
+    {block:CurrentPage}
+    {PageNumber}
+    {/block:CurrentPage}
+    {block:JumpPage}
+    <a href="{URL}">{PageNumber}</a>
+    {/block:JumpPage}
+    {/block:JumpPagination}</span>
+	{block:NextPage}<span class = "right"><a href="{NextPage}">{lang:Next}</a></span>{/block:NextPage}
+	</div>
+{/block:Pagination}    
+</td>
+<td id="sidebar">
+	<a id="avatar" href="/"><img src="{PortraitURL-128}" /></a>
+	<p id="description">{Description}</p>
+    <a href="/ask" class="links">{AskLabel}</a>
+	<hr />
+	<a href = "http://xianbaum.no-ip.org" class = "links">My site</a>
+	<hr />
+	<dfn>Tags</dfn>
+	<ol id="tagged">
+	<li><a href = "/search/will-delete-later">will delete later</a></li>
+	</ol>
+	<form action="" id="">
+  <div>
+    <input type="hidden" name="cx" value="" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="15" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+</form>
+	<hr />
+	<a href="http://www.tumblr.com" class = "tumblr">{lang:Powered by Tumblr}</a>
+	<a href="{RSS}" class = "tumblr">{lang:RSS feed}</a>
+	<a href="http://xianbaum.no-ip.org/tumblr-theme.html" class = "tumblr">Theme</a>
+</td>
+</tr>
+</table>
+</body>
+</html>

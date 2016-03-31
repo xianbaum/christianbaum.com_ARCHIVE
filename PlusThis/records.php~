@@ -1,0 +1,9 @@
+<?php
+$title = 'Records - Hello World!';
+$back = '../../';
+require '../../template.php';
+pheader();
+pmain();
+
+pfooter();
+?>
