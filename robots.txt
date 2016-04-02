@@ -3,5 +3,4 @@ Disallow: /images/
 Disallow: /files/
 Disallow: /contact.php
 Disallow: /template.php
-Disallow: /PlusThis/
 Disallow: /scripts/
